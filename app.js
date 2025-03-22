@@ -1,5 +1,6 @@
 let todos = [];
 
+// eslint-disable-next-line no-unused-vars
 function addTodo() {
     const input = document.getElementById('todo-input');
     if (input.value.trim() !== '') {
@@ -9,6 +10,10 @@ function addTodo() {
     }
 }
 
+function removeTodo(index) {
+    todos.splice(index, 1); // Remove the todo at the specified index
+    renderTodos(); // Re-render the todo list
+}
 
 function renderTodos() {
     const list = document.getElementById('todo-list');
